@@ -2,6 +2,7 @@
 
 namespace App\Services\Synchronization;
 
+use App\Models\Sync;
 use App\Repositories\SubGroupRepository;
 use App\Repositories\SyncRepository;
 use Illuminate\Support\Facades\Http;
@@ -32,7 +33,7 @@ class SubGroupService
             ];
 
             $this->repository->create($attributes);
-            $this->syncRepository->updateOrCreate(
+            Sync::updateOrCreate(
                 [
                     'Tabela' => 'Subgrupo',
                 ],

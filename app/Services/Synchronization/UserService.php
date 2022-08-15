@@ -2,6 +2,7 @@
 
 namespace App\Services\Synchronization;
 
+use App\Models\Sync;
 use App\Repositories\SyncRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\Http;
@@ -27,7 +28,7 @@ class UserService
             $attributes = [
                 'idUsuario' => $data['id'],
                 'CodSistema' => $data['id'],
-                'Usuario' => $data['nome'],
+                'Usuario' => $data['name'],
                 'Senha' => 123,
                 'flgUsuario' => 1,
                 'flgComissionado',
@@ -40,7 +41,7 @@ class UserService
             ];
 
             $this->repository->create($attributes);
-            $this->syncRepository->updateOrCreate(
+            Sync::updateOrCreate(
                 [
                     'Tabela' => 'Usuario',
                 ],

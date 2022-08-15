@@ -2,6 +2,7 @@
 
 namespace App\Services\Synchronization;
 
+use App\Models\Sync;
 use App\Repositories\GroupRepository;
 use App\Repositories\SyncRepository;
 use Illuminate\Support\Facades\Http;
@@ -31,7 +32,7 @@ class GroupService
             ];
 
             $this->repository->create($attributes);
-            $this->syncRepository->updateOrCreate(
+            Sync::updateOrCreate(
                 [
                     'Tabela' => 'Grupo',
                 ],

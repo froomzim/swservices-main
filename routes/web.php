@@ -1,8 +1,8 @@
 <?php
 
-use App\Models\Product;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Http;
+use App\Http\Controllers\SynchronizationController;
+use App\Services\Synchronization\ClientService;
+use App\Services\Synchronization\UserService;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +17,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
-
 });

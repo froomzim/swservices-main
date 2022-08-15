@@ -2,6 +2,7 @@
 
 namespace App\Services\Synchronization;
 
+use App\Models\Sync;
 use App\Repositories\ClientRepository;
 use App\Repositories\SyncRepository;
 use Illuminate\Support\Facades\Http;
@@ -23,21 +24,21 @@ class ClientService
             $r->delete();
         }
 
-        foreach ($get['data'] as $key => $data) {
+        foreach ($get as $key => $data) {
             $attributes = [
                 'idCliente' => $data['id'],
                 'CodSistema' => $data['id'],
                 'CodCliente' => $data['id'],
-                'CNPJ' => $data['doc'],
-                'Cliente' => $data['nome'],
+                'CNPJ' => $data['juridica'] == 1 ? str_replace(['-', '.', '/'], '', $data['doc']) : null,
+                'Cliente' => substr($data['nome'], 0, 59),
                 'Endereco' => $data['logradouro'],
                 'Bairro' => $data['bairro'],
                 'Cidade' => $data['cidade'],
                 'UF' => $data['uf'],
-                'CEP' => $data['cep'],
+                'CEP' => str_replace('-', '', $data['cep']),
                 'Numero' => $data['numero'],
                 'Complemento' => $data['complemento'],
-                'Fantasia' => $data['fanatasia'],
+                'Fantasia' => substr($data['nome'], 0, 29),
                 'idTabelaEspecial' => null,
                 'EmiteNFP' => 1,
                 'NViasFiado' => 1,
@@ -51,7 +52,7 @@ class ClientService
             ];
 
             $this->repository->create($attributes);
-            $this->syncRepository->updateOrCreate(
+            Sync::updateOrCreate(
                 [
                     'Tabela' => 'Cliente',
                 ],

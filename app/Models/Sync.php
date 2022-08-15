@@ -19,4 +19,8 @@ class Sync extends Model
         'Tabela',
         'DataSincronia',
     ];
+
+    protected $casts = [
+        'DataSincronia' => 'datetime',
+    ];
 }

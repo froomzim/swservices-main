@@ -2,6 +2,7 @@
 
 namespace App\Services\Synchronization;
 
+use App\Models\Sync;
 use App\Repositories\CardRepository;
 use App\Repositories\SyncRepository;
 use Illuminate\Support\Facades\Http;
@@ -35,14 +36,11 @@ class CardService
 
             $this->repository->create($attributes);
 
-            $this->syncRepository->updateOrCreate(
-                [
-                    'Tabela' => 'Cartao',
-                ],
-                [
-                    'DataSincronia' => date('Y-m-d H:i:s'),
-                ]
-            );
+            Sync::updateOrCreate([
+                'Tabela' => 'Cartao',
+            ], [
+                'DataSincronia' => now(),
+            ]);
         }
     }
 }

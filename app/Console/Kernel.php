@@ -16,14 +16,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-
-        $schedule->call(function () {
-
-            $routine = (new SynchronizationController);
-
-            $routine->syncRoutine();
-        })->everyTwoMinutes()->runInBackground();
-
+        $schedule->command('sync')->everyTwoMinutes()->runInBackground();
     }
 
     /**

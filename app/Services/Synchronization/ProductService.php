@@ -2,6 +2,7 @@
 
 namespace App\Services\Synchronization;
 
+use App\Models\Sync;
 use App\Repositories\ProductRepository;
 use App\Repositories\SyncRepository;
 use Illuminate\Support\Facades\Http;
@@ -65,7 +66,7 @@ class ProductService
             ];
 
             $this->repository->create($attributes);
-            $this->syncRepository->updateOrCreate(
+            Sync::updateOrCreate(
                 [
                     'Tabela' => 'Produto',
                 ],
