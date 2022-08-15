@@ -19,28 +19,30 @@ class CardService
     public function sync()
     {
         $get = Http::get($this->syncEndpoint)->json();
-        $response = $this->repository->all();
-        foreach ($response as $key => $r) {
-            $r->delete();
-        }
+        if ($get['code'] == '200') {
+            $response = $this->repository->all();
+            foreach ($response as $key => $r) {
+                $r->delete();
+            }
 
-        foreach ($get['data'] as $key => $data) {
-            $attributes = [
-                'idCartao' => $data['id'],
-                'CodSistema' => $data['id'],
-                'Debito' => $data['tipo'] == 'D' ? 1 : 0,
-                'Cartao' => $data['nome'],
-                'flgParcelas' => 0,
-                'flgIdentificaCliente' => 0,
-            ];
+            foreach ($get['data'] as $key => $data) {
+                $attributes = [
+                    'idCartao' => $data['id'],
+                    'CodSistema' => $data['id'],
+                    'Debito' => $data['tipo'] == 'D' ? 1 : 0,
+                    'Cartao' => $data['nome'],
+                    'flgParcelas' => 0,
+                    'flgIdentificaCliente' => 0,
+                ];
 
-            $this->repository->create($attributes);
+                $this->repository->create($attributes);
 
-            Sync::updateOrCreate([
-                'Tabela' => 'Cartao',
-            ], [
-                'DataSincronia' => now(),
-            ]);
+                Sync::updateOrCreate([
+                    'Tabela' => 'Cartao',
+                ], [
+                    'DataSincronia' => now(),
+                ]);
+            }
         }
     }
 }

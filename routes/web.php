@@ -17,4 +17,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $routine = (new ClientService);
+      return $routine->sync();
 });

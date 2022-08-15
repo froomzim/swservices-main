@@ -13,33 +13,35 @@ class GroupService
     {
         $this->repository = new GroupRepository();
         $this->syncRepository = new SyncRepository();
-        $this->syncEndpoint = env('API_URL').'pdv/carga-grupos?token=' . env('API_TOKEN');
+        $this->syncEndpoint = env('API_URL') . 'pdv/carga-grupos?token=' . env('API_TOKEN');
     }
 
     public function sync()
     {
         $get = Http::get($this->syncEndpoint)->json();
-        $response = $this->repository->all();
-        foreach ($response as $key => $r) {
-            $r->delete();
-        }
+        if ($get['code'] == '200') {
+            $response = $this->repository->all();
+            foreach ($response as $key => $r) {
+                $r->delete();
+            }
 
-        foreach ($get['data'] as $key => $data) {
-            $attributes = [
-                'idUsuario' => $data['id'],
-                'CodSistema' => $data['id'],
-                'Grupo' => $data['nome'],
-            ];
+            foreach ($get['data'] as $key => $data) {
+                $attributes = [
+                    'idUsuario' => $data['id'],
+                    'CodSistema' => $data['id'],
+                    'Grupo' => $data['nome'],
+                ];
 
-            $this->repository->create($attributes);
-            Sync::updateOrCreate(
-                [
-                    'Tabela' => 'Grupo',
-                ],
-                [
-                    'DataSincronia' => date('Y-m-d H:i:s'),
-                ]
-            );
+                $this->repository->create($attributes);
+                Sync::updateOrCreate(
+                    [
+                        'Tabela' => 'Grupo',
+                    ],
+                    [
+                        'DataSincronia' => date('Y-m-d H:i:s'),
+                    ]
+                );
+            }
         }
     }
 }
