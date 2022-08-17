@@ -10,7 +10,7 @@ class Card extends Model
     use HasFactory;
 
     protected $primaryKey = 'idCartao';
-    protected $connection = 'superfast';
+    protected $connection = 'pdv';
     protected $table = 'cartao';
     public $timestamps = false;
 

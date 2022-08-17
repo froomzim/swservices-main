@@ -10,7 +10,7 @@ class Group extends Model
     use HasFactory;
 
     protected $primaryKey = 'idGrupo';
-    protected $connection = 'superfast';
+    protected $connection = 'pdv';
     protected $table = 'grupo';
     public $timestamps = false;
 

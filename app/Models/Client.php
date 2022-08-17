@@ -10,7 +10,7 @@ class Client extends Model
     use HasFactory;
 
     protected $primaryKey = 'idCliente';
-    protected $connection = 'superfast';
+    protected $connection = 'pdv';
     protected $table = 'cliente';
     public $timestamps = false;
 

@@ -10,7 +10,7 @@ class SubGroup extends Model
     use HasFactory;
 
     protected $primaryKey = 'idSubGrupo';
-    protected $connection = 'superfast';
+    protected $connection = 'pdv';
     protected $table = 'subgrupo';
     public $timestamps = false;
 

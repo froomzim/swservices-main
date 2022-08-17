@@ -10,7 +10,7 @@ class Sync extends Model
     use HasFactory;
 
     protected $primaryKey = 'idSincronia';
-    protected $connection = 'superfast';
+    protected $connection = 'pdv';
     protected $table = 'sincronia';
     public $timestamps = false;
 

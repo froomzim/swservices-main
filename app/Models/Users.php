@@ -10,7 +10,7 @@ class Users extends Model
     use HasFactory;
 
     protected $primaryKey = 'idUsuario';
-    protected $connection = 'superfast';
+    protected $connection = 'pdv';
     protected $table = 'usuario';
     public $timestamps = false;
 

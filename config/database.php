@@ -64,15 +64,15 @@ return [
         ],
 
 
-        'superfast' => [
+        'pdv' => [
             'driver' => 'mysql',
-            'url' => env('SUPERFAST_DATABASE_URL'),
-            'host' => env('SUPERFAST_DB_HOST', '127.0.0.1'),
-            'port' => env('SUPERFAST_DB_PORT', '3306'),
-            'database' => env('SUPERFAST_DB_DATABASE', 'caixa'),
-            'username' => env('SUPERFAST_DB_USERNAME', 'softwork'),
-            'password' => env('SUPERFAST_DB_PASSWORD', 'softwork'),
-            'unix_socket' => env('SUPERFAST_DB_SOCKET', ''),
+            'url' => env('PDV_DATABASE_URL'),
+            'host' => env('PDV_DB_HOST', '127.0.0.1'),
+            'port' => env('PDV_DB_PORT', '3306'),
+            'database' => env('PDV_DB_DATABASE', 'caixa'),
+            'username' => env('PDV_DB_USERNAME', 'softwork'),
+            'password' => env('PDV_DB_PASSWORD', 'softwork'),
+            'unix_socket' => env('PDV_DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
