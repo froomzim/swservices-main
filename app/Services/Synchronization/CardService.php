@@ -40,7 +40,7 @@ class CardService
                 Sync::updateOrCreate([
                     'Tabela' => 'Cartao',
                 ], [
-                    'DataSincronia' => now(),
+                    'DataSincronia' => date('Y-m-d H:i:s'),
                 ]);
             }
         }
