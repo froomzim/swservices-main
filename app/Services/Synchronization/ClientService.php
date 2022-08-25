@@ -46,8 +46,6 @@ class ClientService
                     'flgNovaPlaca' => 0,
                     'flgKmObrig' => 0,
                     'flgMotoristaObrig' => 0,
-                    'idCentroCusto' => null,
-                    'CodCentroCusto' => null,
                     'CreditoDispo' => 10000,
                 ];
 
