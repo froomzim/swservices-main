@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id('idMovFinCaixa');
             $table->dateTime('DataHora')->nullable();
             $table->char('FlgSangria')->nullable();
-            $table->smallInteger('FlgSangria')->nullable();
+            $table->smallInteger('TipoModalidade')->nullable();
             $table->decimal('Valor', 19, 2)->default('0.000');
             $table->integer('idCaixaAbertura')->nullable();
             $table->integer('sincronizado')->default('0');
