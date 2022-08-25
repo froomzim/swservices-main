@@ -32,6 +32,7 @@ return new class extends Migration
             $table->integer('NViasFiado')->default(1);
             $table->tinyInteger('PermiteFaturar')->default(1);
             $table->tinyInteger('flgNovaPlaca')->nullable();
+            $table->tinyInteger('flgKmObrig')->nullable();
             $table->tinyInteger('flgMotoristaObrig')->nullable();
             $table->integer('idCentroCusto')->default(1);
             $table->string('CodCentroCusto')->default('UNICO');
