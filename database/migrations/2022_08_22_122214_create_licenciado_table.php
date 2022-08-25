@@ -40,6 +40,8 @@ return new class extends Migration
             $table->string('Tipo_Atividade')->nullable();
             $table->string('Cidade')->nullable();
             $table->char('UF', 2)->nullable();
+            $table->integer('idPerfilEmpresa')->nullable();
+            $table->integer('idTabelaEspecial')->nullable();
             $table->timestamps();
         });
     }
