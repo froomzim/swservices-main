@@ -21,10 +21,10 @@ return new class extends Migration
             $table->string('ArqReq', 250)->nullable();
             $table->string('ArqSTS', 250)->nullable();
             $table->string('ArqTem', 250)->nullable();
-            $table->integer('AutoAtivarGP')->nullable();
+            $table->boolean('AutoAtivarGP')->nullable();
             $table->integer('EsperarSTS')->nullable();
             $table->string('GPExeName', 300)->nullable();
-            $table->integer('LogDebug')->nullable();
+            $table->boolean('LogDebug')->nullable();
             $table->integer('NumVias')->nullable();
             $table->timestamps();
         });

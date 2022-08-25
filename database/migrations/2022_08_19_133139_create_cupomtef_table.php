@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('Rede')->nullable();
             $table->string('NSU')->nullable();
             $table->decimal('ValorTotal', 15, 2)->nullable();
-            $table->integer('flgDebito')->nullable();
-            $table->integer('flgCredito')->nullable();
-            $table->integer('flgCancelado')->nullable();
+            $table->boolean('flgDebito')->nullable();
+            $table->boolean('flgCredito')->nullable();
+            $table->boolean('flgCancelado')->nullable();
             $table->string('TipoOperacao')->nullable();
             $table->integer('Parcelas')->nullable();
             $table->string('Parcelador')->nullable();

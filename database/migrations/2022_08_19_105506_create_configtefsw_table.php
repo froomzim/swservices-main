@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('Empresa')->nullable();
             $table->integer('Filial')->nullable();
             $table->integer('PDV')->nullable();
-            $table->integer('FlgAtivo')->nullable();
+            $table->boolean('FlgAtivo')->nullable();
             $table->timestamps();
         });
     }

@@ -21,8 +21,8 @@ return new class extends Migration
             $table->integer('EspacoEntreLinhas')->nullable();
             $table->integer('LinhasBuffer')->nullable();
             $table->integer('LinhasPular')->nullable();
-            $table->integer('TraduzirTag')->nullable();
-            $table->integer('IgnorarTag')->nullable();
+            $table->boolean('TraduzirTag')->nullable();
+            $table->boolean('IgnorarTag')->nullable();
             $table->string('ArqLog', 100)->nullable();
             $table->integer('PaginaDeCodigo')->nullable();
             $table->integer('BarrasLargura')->nullable();

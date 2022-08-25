@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::connection('pdv')->create('configswservices', function (Blueprint $table) {
             $table->id('idConfigSWServices');
             $table->string('HostSWServices', 100)->nullable();
-            $table->integer('flgAutomacao')->nullable();
-            $table->integer('flgComandas')->default(0);
+            $table->boolean('flgAutomacao')->nullable();
+            $table->boolean('flgComandas')->default(0);
             $table->integer('ilha')->nullable();
-            $table->integer('flgSAT')->default(0);
+            $table->boolean('flgSAT')->default(0);
             $table->timestamps();
         });
     }
