@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id('idConfigBalanca');
             $table->integer('TipoBalanca')->nullable();
             $table->string('PortaSerial', 10)->nullable();
-            $table->integer('BaudRate', 11)->nullable();
-            $table->integer('DataBits', 11)->nullable();
+            $table->integer('BaudRate' )->nullable();
+            $table->integer('DataBits')->nullable();
             $table->string('Parity', 10)->nullable();
             $table->string('StopBits', 10)->nullable();
             $table->string('HandShaking', 10)->nullable();
