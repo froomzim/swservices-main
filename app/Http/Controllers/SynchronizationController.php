@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Services\Synchronization\CardService;
 use App\Services\Synchronization\ClientService;
 use App\Services\Synchronization\GroupService;
+use App\Services\Synchronization\LicensedService;
 use App\Services\Synchronization\ProductService;
 use App\Services\Synchronization\SubGroupService;
 use App\Services\Synchronization\UserService;
@@ -21,6 +22,7 @@ class SynchronizationController extends Controller
            new ProductService(),
            new UserService(),
            new ClientService(),
+           new LicensedService(),
         ];
     }
 
