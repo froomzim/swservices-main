@@ -13,7 +13,7 @@ return new class extends Migration
     public function up()
     {
 
-        DB::statement('CREATE DATABASE [IF NOT EXISTS] caixa');
+        DB::raw('CREATE DATABASE [IF NOT EXISTS] caixa');
 
     }
 
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down()
     {
-        DB::statement('DROP DATABASE [IF EXISTS] caixa');
+        DB::raw('DROP DATABASE [IF EXISTS] caixa');
     }
 };
