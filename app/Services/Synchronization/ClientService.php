@@ -40,7 +40,6 @@ class ClientService
                     'Numero' => $data['numero'],
                     'Complemento' => $data['complemento'],
                     'Fantasia' => substr($data['nome'], 0, 29),
-                    'idTabelaEspecial' => null,
                     'EmiteNFP' => 1,
                     'NViasFiado' => 1,
                     'PermiteFaturar' => 1,
