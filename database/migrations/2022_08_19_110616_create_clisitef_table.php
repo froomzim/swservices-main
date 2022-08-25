@@ -33,7 +33,6 @@ return new class extends Migration
             $table->string('Restricoes', 255)->nullable();
             $table->integer('PortaPinPad')->nullable();
             $table->tinyInteger('UsaUFT8')->default(0);
-            $table->string('CodigoLoja', 20)->nullable();
             $table->timestamps();
         });
     }
