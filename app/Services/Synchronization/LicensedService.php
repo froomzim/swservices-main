@@ -22,9 +22,8 @@ class LicensedService
         if ($get['code'] == '200') {
             $response = $this->repository->all();
             foreach ($response as $key => $r) {
-                $r->delete();
+                $r->truncate();
             }
-
             foreach ($get['data'] as $key => $data) {
                 $attributes = [
                     'CodLicenciado' => $data['id'],
