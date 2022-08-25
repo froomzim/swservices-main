@@ -36,7 +36,7 @@ return new class extends Migration
             $table->boolean('ExibeNumero')->nullable();
             $table->boolean('ControlePorta')->nullable();
             $table->boolean('CortaPapel')->nullable();
-            $table->varchar('CabecalhoDestaque', 48)->nullable();
+            $table->string('CabecalhoDestaque', 48)->nullable();
             $table->binary('CabecalhoCorpo')->nullable();
             $table->binary('RodapeCorpo')->nullable();
             $table->integer('UltimoCOO', 20)->default(0);
