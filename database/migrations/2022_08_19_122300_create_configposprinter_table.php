@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('Porta', 50)->nullable();
             $table->integer('Colunas')->nullable();
             $table->integer('EspacoEntreLinhas')->nullable();
+            $table->integer('LinhasBuffer')->nullable();
             $table->integer('LinhasPular')->nullable();
             $table->boolean('TraduzirTag')->nullable();
             $table->boolean('IgnorarTag')->nullable();

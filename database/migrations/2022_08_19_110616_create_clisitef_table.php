@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::connection('pdv')->create('clisitef', function (Blueprint $table) {
-            $table->id('idCliSiTEF');
+            $table->id('idCliSiTEF')->autoIncrement();
             $table->string('ArqLog', 255)->nullable();
             $table->string('CodigoLoja', 20)->nullable();
             $table->string('DataHoraFiscal', 20)->nullable();
