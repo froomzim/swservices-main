@@ -23,23 +23,23 @@ return new class extends Migration
             $table->boolean('TraduzirTag')->nullable();
             $table->boolean('IgnorarTag')->nullable();
             $table->string('ArqLog', 100)->nullable();
-            $table->integer('PaginaDeCodigo', 11)->nullable();
-            $table->integer('BarrasLargura', 11)->nullable();
-            $table->integer('BarrasAltura', 11)->nullable();
-            $table->integer('QRCodeTipo', 11)->nullable();
-            $table->integer('QrCodeLargura', 11)->nullable();
-            $table->integer('ErorLevel', 11)->nullable();
-            $table->integer('LogoKC1', 11)->nullable();
-            $table->integer('LogoKC2', 11)->nullable();
-            $table->integer('LogoFatorX', 11)->nullable();
-            $table->integer('LogoFatorY', 11)->nullable();
+            $table->integer('PaginaDeCodigo')->nullable();
+            $table->integer('BarrasLargura')->nullable();
+            $table->integer('BarrasAltura')->nullable();
+            $table->integer('QRCodeTipo')->nullable();
+            $table->integer('QrCodeLargura')->nullable();
+            $table->integer('ErorLevel')->nullable();
+            $table->integer('LogoKC1')->nullable();
+            $table->integer('LogoKC2')->nullable();
+            $table->integer('LogoFatorX')->nullable();
+            $table->integer('LogoFatorY')->nullable();
             $table->boolean('ExibeNumero')->nullable();
             $table->boolean('ControlePorta')->nullable();
             $table->boolean('CortaPapel')->nullable();
             $table->string('CabecalhoDestaque', 48)->nullable();
             $table->binary('CabecalhoCorpo')->nullable();
             $table->binary('RodapeCorpo')->nullable();
-            $table->integer('UltimoCOO', 20)->default(0);
+            $table->integer('UltimoCOO')->default(0);
 
 
 
