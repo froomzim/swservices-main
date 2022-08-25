@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('Nome', 100)->nullable();
             $table->boolean('flgAdmin')->default(0);
             $table->boolean('flgSupervisor')->default(0);
-            $table->SenhaSupervisor('Nome', 32)->nullable();
+            $table->string('SenhaSupervisor', 32)->nullable();
             $table->string('Codigo', 32)->nullable();
             $table->string('Contato', 50)->nullable();
             $table->timestamps();
