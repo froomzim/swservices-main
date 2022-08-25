@@ -21,7 +21,6 @@ return new class extends Migration
             $table->integer('RegTributario')->nullable();
             $table->integer('RegTributarioISSQN')->nullable();
             $table->integer('IndRatISSQN')->nullable();
-            $table->string('VersaoDados')->nullable();
             $table->integer('IPServico')->nullable();
             $table->string('SWCNPJ')->nullable();
             $table->string('SWAssinatura', 300)->nullable();
