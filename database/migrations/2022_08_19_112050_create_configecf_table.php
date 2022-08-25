@@ -23,7 +23,6 @@ return new class extends Migration
             $table->boolean('BloqueiaMouseTeclado')->nullable();
             $table->boolean('ExibeMsgAguarde')->nullable();
             $table->boolean('GavetaSinalInvert')->nullable();
-            $table->boolean('GavetaSinalInvert')->nullable();
             $table->boolean('ArredondaPorQtde')->nullable();
             $table->string('MSGAguarde', 300)->nullable();
             $table->string('ArqLog', 200)->nullable();
