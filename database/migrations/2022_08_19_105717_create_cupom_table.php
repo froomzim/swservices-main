@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cupom', function (Blueprint $table) {
+        Schema::connection('pdv')->create('cupom', function (Blueprint $table) {
             $table->id('idCupom');
             $table->integer('idCaixa');
             $table->dateTime('DataCupom');
@@ -46,6 +46,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cupom');
+        Schema::connection('pdv')->dropIfExists('cupom');
     }
 };

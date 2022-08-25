@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('kit', function (Blueprint $table) {
+        Schema::connection('pdv')->create('kit', function (Blueprint $table) {
             $table->id('idKIT');
             $table->string('Nome')->nullable();
             $table->decimal('Valor', 19, 3)->default('0.000');
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kit');
+        Schema::connection('pdv')->dropIfExists('kit');
     }
 };

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tabelaespecial', function (Blueprint $table) {
+        Schema::connection('pdv')->create('tabelaespecial', function (Blueprint $table) {
             $table->id('idTabelaEspecial');
             $table->integer('CodTabelaSistema');
             $table->integer('codSistema')->nullable();
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tabelaespecial');
+        Schema::connection('pdv')->dropIfExists('tabelaespecial');
     }
 };

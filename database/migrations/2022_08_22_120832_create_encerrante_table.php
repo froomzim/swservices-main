@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('encerrante', function (Blueprint $table) {
+        Schema::connection('pdv')->create('encerrante', function (Blueprint $table) {
             $table->id('idEncerrante');
             $table->integer('idBico')->nullable();
             $table->decimal('encInicial', 22, 4)->nullable();
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('encerrante');
+        Schema::connection('pdv')->dropIfExists('encerrante');
     }
 };
