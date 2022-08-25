@@ -21,12 +21,12 @@ return new class extends Migration
             $table->integer('idOperador');
             $table->dateTime('DataEncerramento')->nullable();
             $table->string('NomeBD');
-            $table->tinyInteger('sincronizado')->default(0);
-            $table->tinyInteger('IdentificaVendedor')->default(0);
-            $table->tinyInteger('IdentificaporItem')->default(0);
-            $table->tinyInteger('flgTrocoCartao')->default(0);
-            $table->tinyInteger('SincronizadoAbertura')->default(0);
-            $table->tinyInteger('SincronizadoFechamento')->default(0);
+            $table->boolean('sincronizado')->default(0);
+            $table->boolean('IdentificaVendedor')->default(0);
+            $table->boolean('IdentificaporItem')->default(0);
+            $table->boolean('flgTrocoCartao')->default(0);
+            $table->boolean('SincronizadoAbertura')->default(0);
+            $table->boolean('SincronizadoFechamento')->default(0);
             $table->decimal('limiteDiferenca', 19, 4)->default('0.0000');
             $table->decimal('limiteDesconto', 6, 3)->default('0.0000');
             $table->decimal('TrocoAbertura', 19, 2)->default('0.0000');

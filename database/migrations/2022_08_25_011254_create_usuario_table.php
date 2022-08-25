@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('CodSistema', 50)->nullable();
             $table->string('Usuario', 50)->nullable();
             $table->string('Senha', 50)->nullable();
-            $table->integer('flgUsuario')->default(0);
+            $table->boolean('flgUsuario')->default(0);
             $table->integer('flgComissionado')->default(0);
             $table->string('Nome', 100)->nullable();
-            $table->integer('flgAdmin')->default(0);
-            $table->integer('flgSupervisor')->default(0);
+            $table->boolean('flgAdmin')->default(0);
+            $table->boolean('flgSupervisor')->default(0);
             $table->string('SenhaSupervisor', 32)->nullable();
             $table->string('Codigo', 32)->nullable();
             $table->string('Contato', 50)->nullable();

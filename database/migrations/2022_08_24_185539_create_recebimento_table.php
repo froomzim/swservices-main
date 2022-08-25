@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('TipoModalidade')->nullable();
             $table->string('Descricao', 200)->nullable();
             $table->decimal('Valor', 19, 4)->nullable();
-            $table->smallInteger('Sincronizado')->default(0);
+            $table->boolean('Sincronizado')->default(0);
             $table->dateTime('DataHora')->nullable();
             $table->string('CodCliente', 40)->nullable();
             $table->string('Guid', 40)->nullable();

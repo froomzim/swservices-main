@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('DataHoraFiscal', 20)->nullable();
             $table->string('DocumentoFiscal', 20)->nullable();
             $table->string('EnderecoIP', 255)->nullable();
-            $table->tinyInteger('ExibirErroRetorno')->default(0);
-            $table->tinyInteger('LogDebug')->default(0);
-            $table->tinyInteger('Habilitado')->default(0);
+            $table->boolean('ExibirErroRetorno')->default(0);
+            $table->boolean('LogDebug')->default(0);
+            $table->boolean('Habilitado')->default(0);
             $table->string('NumeroTerminal', 20)->nullable();
             $table->integer('OperacaoADM')->nullable();
             $table->integer('OperacaoATV')->nullable();
@@ -32,7 +32,7 @@ return new class extends Migration
             $table->integer('OperacaoReimpressao')->nullable();
             $table->string('Restricoes', 255)->nullable();
             $table->integer('PortaPinPad')->nullable();
-            $table->tinyInteger('UsaUFT8')->default(0);
+            $table->boolean('UsaUFT8')->default(0);
             $table->timestamps();
         });
     }

@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('CodLicenciado', 40)->nullable();
             $table->string('NomeLicenciado', 100)->nullable();
             $table->string('CNPJLicenciado', 14)->nullable();
-            $table->integer('IdentificaFuncionario')->default(0);
-            $table->integer('IdentificaPorItem')->default(0);
+            $table->boolean('IdentificaFuncionario')->default(0);
+            $table->boolean('IdentificaPorItem')->default(0);
             $table->string('SkinName', 30)->nullable();
             $table->integer('QtdeMaxItem')->nullable();
             $table->string('CaminhoTintometrico', 300)->nullable();

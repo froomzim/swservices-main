@@ -34,9 +34,9 @@ return new class extends Migration
             $table->integer('LogoKC2')->nullable();
             $table->integer('LogoFatorX')->nullable();
             $table->integer('LogoFatorY')->nullable();
-            $table->integer('ExibeNumero')->nullable();
-            $table->integer('ControlePorta')->nullable();
-            $table->integer('CortaPapel')->nullable();
+            $table->boolean('ExibeNumero')->nullable();
+            $table->boolean('ControlePorta')->nullable();
+            $table->boolean('CortaPapel')->nullable();
             $table->string('CabecalhoDestaque', 48)->nullable();
             $table->binary('CabecalhoCorpo')->nullable();
             $table->binary('RodapeCorpo')->nullable();

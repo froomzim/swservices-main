@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('CEP', 8)->nullable();
             $table->string('Fantasia', 30)->nullable();
             $table->integer('idTabelaEspecial')->default(0);
-            $table->integer('EmiteNFP')->default(0);
+            $table->boolean('EmiteNFP')->default(0);
             $table->integer('NViasFiado')->default(1);
             $table->tinyInteger('PermiteFaturar')->default(1);
             $table->tinyInteger('flgNovaPlaca')->nullable();
