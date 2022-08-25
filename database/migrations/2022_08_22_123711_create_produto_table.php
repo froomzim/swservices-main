@@ -38,6 +38,7 @@ return new class extends Migration
             $table->integer('NCM')->nullable();
             $table->char('TipoAliqECF', 2)->nullable();
             $table->char('VendaFracionada', 1)->default(0);
+            $table->char('DiasTroca', 1)->default(0);
             $table->decimal('Desconto', 19, 4)->default('0.000');
             $table->char('flgComissao', 1)->default(0);
             $table->string('CodGrupo')->nullable();
