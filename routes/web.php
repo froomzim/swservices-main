@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\SynchronizationController;
 use App\Services\Synchronization\ClientService;
+use App\Services\Synchronization\LicensedService;
 use App\Services\Synchronization\ProductService;
 use App\Services\Synchronization\UserService;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $routine = (new ProductService);
+    $routine = (new LicensedService);
       return $routine->sync();
 });
