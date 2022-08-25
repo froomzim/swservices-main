@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::connect('pdv')->create('usuario', function (Blueprint $table) {
+        Schema::connection('pdv')->create('usuario', function (Blueprint $table) {
             $table->id('idUsuario');
             $table->string('CodSistema', 50)->nullable();
             $table->string('Usuario', 50)->nullable();
@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::connect('pdv')->dropIfExists('usuario');
+        Schema::connection('pdv')->dropIfExists('usuario');
     }
 };
