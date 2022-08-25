@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::connection('pdv')->create('configesperaabast', function (Blueprint $table) {
             $table->id();
-            $table->boolean('Ativo')->nullable();
+            $table->integer('Ativo')->nullable();
             $table->integer('TempoEsperaMin')->nullable();
-            $table->boolean('flgFiscal')->nullable();
-            $table->boolean('flgImprimir')->nullable();
-            $table->boolean('GeraAutomatico')->nullable();
+            $table->integer('flgFiscal')->nullable();
+            $table->integer('flgImprimir')->nullable();
+            $table->integer('GeraAutomatico')->nullable();
             $table->decimal('Desconto', 6, 3)->nullable();
             $table->timestamps();
         });

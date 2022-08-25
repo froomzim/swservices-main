@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::connection('pdv')->create('satxml', function (Blueprint $table) {
             $table->id('idSATXML');
             $table->integer('idCupom');
-            $table->boolean('Cancelado')->default(0);
-            $table->boolean('sincronizado')->default(0);
+            $table->integer('Cancelado')->default(0);
+            $table->integer('sincronizado')->default(0);
             $table->binary('xml');
             $table->timestamps();
         });

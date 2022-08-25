@@ -21,8 +21,8 @@ return new class extends Migration
             $table->integer('EspacoEntreLinhas')->nullable();
             $table->integer('LinhasBuffer')->nullable();
             $table->integer('LinhasPular')->nullable();
-            $table->boolean('TraduzirTag')->nullable();
-            $table->boolean('IgnorarTag')->nullable();
+            $table->integer('TraduzirTag')->nullable();
+            $table->integer('IgnorarTag')->nullable();
             $table->string('ArqLog', 100)->nullable();
             $table->integer('PaginaDeCodigo')->nullable();
             $table->integer('BarrasLargura')->nullable();
@@ -34,13 +34,13 @@ return new class extends Migration
             $table->integer('LogoKC2')->nullable();
             $table->integer('LogoFatorX')->nullable();
             $table->integer('LogoFatorY')->nullable();
-            $table->boolean('ExibeNumero')->nullable();
-            $table->boolean('ControlePorta')->nullable();
-            $table->boolean('CortaPapel')->nullable();
+            $table->integer('ExibeNumero')->nullable();
+            $table->integer('ControlePorta')->nullable();
+            $table->integer('CortaPapel')->nullable();
             $table->string('CabecalhoDestaque', 48)->nullable();
             $table->binary('CabecalhoCorpo')->nullable();
             $table->binary('RodapeCorpo')->nullable();
-            $table->integer('UltimoCOO')->default(0);
+            $table->bigInteger('UltimoCOO')->default(0);
 
 
 
