@@ -24,9 +24,9 @@ return new class extends Migration
             $table->decimal('Acrescimo', 19, 4)->default('0.00');
             $table->decimal('TotalCupom', 19, 4)->default('0.00');
             $table->decimal('TotalRecebido', 19, 4)->default('0.00');
-            $table->integer('flgCancelado')->default(false);
+            $table->boolean('flgCancelado')->default(false);
             $table->dateTime('DataCancelamento')->nullable();
-            $table->integer('flgSincronizado')->default(false);
+            $table->boolean('flgSincronizado')->default(false);
             $table->smallInteger('TipoCupom')->nullable();
             $table->string('CodVendedor', 40)->nullable();
             $table->string('CodSistema', 40)->nullable();

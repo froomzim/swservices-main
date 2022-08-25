@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id('idEncerrante');
             $table->integer('idBico')->nullable();
             $table->decimal('encInicial', 22, 4)->nullable();
-            $table->integer('flgEncIniManual')->nullable();
+            $table->boolean('flgEncIniManual')->nullable();
             $table->decimal('encFinal', 22, 4)->nullable();
-            $table->integer('flgEncFinal')->nullable();
+            $table->boolean('flgEncFinal')->nullable();
             $table->decimal('Litros', 22, 4)->nullable();
             $table->decimal('Afericao', 22, 4)->nullable();
             $table->decimal('VUnitMedio', 6, 3)->nullable();

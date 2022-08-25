@@ -46,7 +46,7 @@ return new class extends Migration
             $table->string('Bico')->nullable();
             $table->integer('idTipo')->nullable();
             $table->string('CodigoANP')->nullable();
-            $table->char('FlgPermiteFaturar', 1)->default(1);
+            $table->boolean('FlgPermiteFaturar', 1)->default(1);
             $table->char('flgDigitarDescricao', 1)->default(0);
             $table->char('flgDigitarUnitario', 1)->default(0);
             $table->decimal('preco_atacado', 19, 4)->default('0.000')->nullable();
